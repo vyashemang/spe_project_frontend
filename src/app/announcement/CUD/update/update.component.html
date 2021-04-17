@@ -1,0 +1,14 @@
+
+<!-- #updateForm="ngForm" -->
+<form [formGroup]="updateForm" (ngSubmit)="updateAnnouncement()">
+    <div [formGroup]="updateForm" class="form-group">
+        <label for="title">Title</label>
+        <input type="text" ngModel  name="title" class="form-control" id="title" placeholder="Enter title" formControlName="title"/>
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea type="text" ngModel  name="description" class="form-control" id="description" placeholder="Enter Description" rows="3" formControlName="description"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+

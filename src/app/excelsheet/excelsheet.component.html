@@ -1,0 +1,31 @@
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(odd) {
+      background-color: #dddddd;
+    }
+</style>
+
+<input type="file" (change)="onFileChange($event)" multiple="false"/>
+
+
+
+<table>
+    <tbody>
+        <tr *ngFor = "let row of data">
+            <td *ngFor="let cell of row">
+                {{cell}}
+            </td>
+        </tr>
+    </tbody>
+</table>

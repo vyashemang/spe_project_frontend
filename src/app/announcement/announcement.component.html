@@ -1,0 +1,38 @@
+
+<button *ngIf="authority === 'fc' || authority === 'admin'" class="btn btn-primary" routerLink="/announcement/add">Make Announcement</button>
+
+<br/>
+<br/>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col"> </th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let a of announcements ; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>
+        {{a.title}}
+      </td>
+      <td>
+        {{a.description}}        
+      </td>
+      <td>
+        <br/>
+        <!-- routerLink="/announcement/update" -->
+        <button *ngIf="authority === 'fc' || authority === 'admin'" class="btn btn-primary" (click)="onEdit(a)">Edit</button>
+        
+        <button style="background-color: crimson;" *ngIf="authority === 'fc' || authority === 'admin'" class="btn btn-primary" (click)="onDelete(a)">Delete</button>
+      </td>
+      <td>
+        {{a.date}}
+      </td>
+    </tr>
+  </tbody>
+</table>

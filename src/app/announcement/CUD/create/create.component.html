@@ -1,0 +1,12 @@
+<form #simpleForm="ngForm" (ngSubmit)="addAnnouncement(simpleForm.value)">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" ngModel  name="title" class="form-control" id="title" placeholder="Enter title" >
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea type="text" ngModel  name="description" class="form-control" id="description" placeholder="Enter Description" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
