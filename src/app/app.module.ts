@@ -18,6 +18,15 @@ import { AnnouncementComponent } from './announcement/announcement.component';
 import { CreateComponent } from './announcement/CUD/create/create.component';
 import { UpdateComponent } from './announcement/CUD/update/update.component';
 import { DeleteComponent } from './announcement/CUD/delete/delete.component';
+import { AbsenteesComponent } from './absentees/absentees.component';
+
+import { MatFormFieldModule } from '@angular/material/form-field'; 
+import { MatInputModule } from '@angular/material/input'; 
+import { MatDatepickerModule } from '@angular/material/datepicker'; 
+import { MatNativeDateModule } from '@angular/material/core'; 
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+
 
 @NgModule({
   declarations: [
@@ -32,16 +41,24 @@ import { DeleteComponent } from './announcement/CUD/delete/delete.component';
     AnnouncementComponent,
     CreateComponent,
     UpdateComponent,
-    DeleteComponent
+    DeleteComponent,
+    AbsenteesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatFormFieldModule, 
+    MatInputModule, 
+    MatDatepickerModule, 
+    MatNativeDateModule, 
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
-  providers: [httpInterceptorProviders],
+  exports:[ MatDatepickerModule, MatNativeDateModule ],
+  providers: [httpInterceptorProviders, MatDatepickerModule, MatNativeDateModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

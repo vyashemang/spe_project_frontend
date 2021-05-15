@@ -11,6 +11,7 @@ import { AnnouncementComponent } from './announcement/announcement.component';
 import { CreateComponent } from './announcement/CUD/create/create.component';
 import { UpdateComponent } from './announcement/CUD/update/update.component';
 import { DeleteComponent } from './announcement/CUD/delete/delete.component';
+import { AbsenteesComponent } from './absentees/absentees.component';
 
 const routes: Routes = [
     {
@@ -57,7 +58,11 @@ const routes: Routes = [
         path: '',
         redirectTo: 'home',
         pathMatch: 'full'
-    }
+    },
+    {
+        path: 'absentees',
+        component: AbsenteesComponent
+    },
 ];
 
 @NgModule({

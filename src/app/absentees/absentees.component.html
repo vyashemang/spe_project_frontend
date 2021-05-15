@@ -1,0 +1,29 @@
+<div *ngIf="authority === 'fc' || authority === 'admin'">
+    <!-- count -->
+
+    <h3>Today's head count for meals: {{count}}</h3>
+
+</div>
+
+<div *ngIf="authority === 'user' || authority === 'fc'">
+    <h3>Mark your days of absence for meals</h3>
+        <mat-form-field appearance="outline">
+            <input matInput [matDatepicker]="PublishedFrom" placeholder="Start Date" formControlName="PublishedFrom"
+                [min]="minStartDate" (dateChange)="getDate(PublishedFrom)">
+            <mat-label>Publish FROM *</mat-label>
+            <mat-datepicker-toggle matSuffix [for]="PublishedFrom"></mat-datepicker-toggle>
+            <mat-datepicker #PublishedFrom></mat-datepicker>
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="outline">
+            <input matInput [matDatepicker]="PublishedTo" placeholder="End Date" formControlName="PublishedTo"
+                [min]="minEndDate">
+            <mat-label>Publish TO *</mat-label>
+            <mat-datepicker-toggle matSuffix [for]="PublishedTo"></mat-datepicker-toggle>
+            <mat-datepicker #PublishedTo></mat-datepicker>
+        </mat-form-field>
+        <br />
+
+        <button (click)="submitDate(PublishedFrom, PublishedTo)">Submit</button>
+</div>
+

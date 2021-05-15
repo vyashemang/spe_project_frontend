@@ -10,7 +10,6 @@ const httpOptions = {
     'Host': 'localhost',
     'content-type' :'application/json',
     'Access-Control-Allow-Origin' : '*'
-
   })
 };
 
