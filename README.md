@@ -1,1 +1,7 @@
-This is  angular front end for No Haste No waste
+The front end code for app No Haste No Waste
+
+- How to run 
+
+    * Go to folder 
+    * run - npm install
+    * run - ng serve
