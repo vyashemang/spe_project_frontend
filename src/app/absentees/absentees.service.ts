@@ -6,7 +6,7 @@ import { Absentees } from './absentees-info';
 
 const httpOptions = {
   headers: new HttpHeaders({ 
-    'X-Host-Override': 'localhost',
+    'X-Host-Override': '172.18.0.23',
     'content-type' :'application/json',
     'Access-Control-Allow-Origin' : '*'
   })
@@ -17,8 +17,8 @@ const httpOptions = {
 })
 export class AbsenteesService {
 
-  private getCountURL = "http://localhost:8082/api/absentees/get";
-  private updateCountURL = "http://localhost:8082/api/absentees/update";
+  private getCountURL = "http://172.18.0.23:8082/api/absentees/get";
+  private updateCountURL = "http://172.18.0.23:8082/api/absentees/update";
   
   constructor(private http: HttpClient, private router: Router) { }
 

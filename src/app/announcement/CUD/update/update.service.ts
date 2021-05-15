@@ -18,8 +18,8 @@ const httpParams = {
 })
 export class UpdateService {
 
-  private getAnnouncementUrl = 'http://localhost:8082/api/announcement/get/';
-  private updateAnnouncementUrl = 'http://localhost:8082/api/announcement/update/';
+  private getAnnouncementUrl = 'http://172.18.0.23:8082/api/announcement/get/';
+  private updateAnnouncementUrl = 'http://172.18.0.23:8082/api/announcement/update/';
 
   constructor(private http: HttpClient) { }
 

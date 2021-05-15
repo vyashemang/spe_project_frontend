@@ -7,7 +7,7 @@ import { NavigationExtras, Router } from '@angular/router';
 
 const httpOptions = {
   headers: new HttpHeaders({ 
-    'Host': 'localhost',
+    'Host': '172.18.0.23',
     'content-type' :'application/json',
     'Access-Control-Allow-Origin' : '*'
   })
@@ -18,8 +18,8 @@ const httpOptions = {
 })
 export class AnnouncementService {
 
-  private getUrl = 'http://localhost:8082/api/announcement/all';
-  private deleteUrl = 'http://localhost:8082/api/announcement/delete/'
+  private getUrl = 'http://172.18.0.23:8082/api/announcement/all';
+  private deleteUrl = 'http://172.18.0.23:8082/api/announcement/delete/'
 
   constructor(private http: HttpClient, private router: Router) {
   }

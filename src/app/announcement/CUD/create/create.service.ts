@@ -12,7 +12,7 @@ const httpOptions = {
 })
 export class CreateService {
 
-  private getUrl = 'http://localhost:8082/api/announcement/add';
+  private getUrl = 'http://172.18.0.23:8082/api/announcement/add';
 
   constructor(private http: HttpClient) { }
 
