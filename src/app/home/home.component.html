@@ -1,11 +1,20 @@
 <div *ngIf="info.token; else loggedOut">
   <h5 class="text-primary">Your Information</h5>
   <p>
-    <strong>Welcome </strong> {{info.username}} !<br/>
+    <strong>Welcome {{info.username}} ! </strong> <br/>
   </p>
+  <h5>
+      Navigate to <strong>Announcement section</strong> to get the latest updates! <br/>
+      <br/>
+      Incase you won't be available for any meal, mark your absence in the <strong>Menu section</strong> 
+  </h5>
   <br/>
   <button class="btn btn-secondary" (click)="logout()">Logout</button>
+  <br/>
 </div>
+
+<br/>
+
 
 <ng-template #loggedOut>
   Please login.

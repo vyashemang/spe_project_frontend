@@ -27,8 +27,7 @@
         <br/>
         <!-- routerLink="/announcement/update" -->
         <button *ngIf="authority === 'fc' || authority === 'admin'" class="btn btn-primary" (click)="onEdit(a)">Edit</button>
-        
-        <button style="background-color: crimson;" *ngIf="authority === 'fc' || authority === 'admin'" class="btn btn-primary" (click)="onDelete(a)">Delete</button>
+        <button style="background-color: crimson; margin-left: 10px;" *ngIf="authority === 'fc' || authority === 'admin'" class="btn btn-primary" (click)="onDelete(a)">Delete</button>
       </td>
       <td>
         {{a.date}}
